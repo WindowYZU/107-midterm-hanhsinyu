@@ -118,8 +118,9 @@ public class NewJFrame extends javax.swing.JFrame {
                         progress.setVisible(false);
                         jButton1.setEnabled(true);
                         //將下載好的項目加入到 jList 裡面
-                        DefaultListModel model = (DefaultListModel) jList1.getModel();
+                        DefaultListModel model = new DefaultListModel();
                         model.addElement(selectedItem);
+                        jList1.setModel(model);
                         ////////////////////////////
                         SwingUtilities.invokeLater(new Runnable() {
                             @Override
